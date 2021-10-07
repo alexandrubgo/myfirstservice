@@ -14,6 +14,7 @@ import (
 )
 
 func main() {
+	//PRIMUL FEATURE ADAUGAT
 	db, err := sql.Open("mysql", "root:123qweasdzxc@tcp(127.0.0.1:3306)/database")
 	if err != nil {
 		log.Fatal(err)
