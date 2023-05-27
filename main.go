@@ -28,13 +28,13 @@ func main() {
 
 	r := mux.NewRouter()
 
-	// GET
+	// GET ALL
 	r.HandleFunc("/players", userHttp.GetPlayers).Methods("GET")
-	// GET
+	// GET BY ID
 	r.HandleFunc("/players/{id}", userHttp.GetPlayer).Methods("GET")
-	// POST
+	// POST NEW PLAYER
 	r.HandleFunc("/playersx", userHttp.CreatePlayer).Methods("POST")
-	//DELETE
+	//DELETE PLAYER
 	r.HandleFunc("/players/remove/{id}", userHttp.DeletePlayer).Methods("DELETE")
 
 	log.Fatal(http.ListenAndServe(":8080", r))
